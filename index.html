@@ -16,6 +16,7 @@
             height: 100vh;
             flex-direction: column;
             position: relative;
+            overflow: hidden;
         }
         .error-message {
             color: red;
@@ -47,7 +48,7 @@
     </div>
 
     <img id="image" src="https://i.ibb.co/zJXpR8c/error-MSG2.webp" alt="Surprise Image">
-    <div class="overlay-message" id="overlay-message">FUCK OFF CUNT. Say hi to Habib & Tanim fucking love those guys! <3</div>
+    <div class="overlay-message" id="overlay-message">FUCK OFF CUNT. Say hi to Habib & Tanim, fucking love those guys! <3</div>
 
     <script>
         setTimeout(() => {
@@ -56,9 +57,18 @@
             document.getElementById('overlay-message').style.display = 'block';
         }, 3000);
 
-         setTimeout(() => {
-            document.getElementById('overlay-message').style.display = 'block';
-        }, 4000);
+        setTimeout(() => {
+            startFlashing();
+        }, 6000);
+
+        function startFlashing() {
+            const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+            let i = 0;
+            setInterval(() => {
+                document.body.style.backgroundColor = colors[i];
+                i = (i + 1) % colors.length;
+            }, 500); // Change color every 500ms
+        }
     </script>
 </body>
 </html>
