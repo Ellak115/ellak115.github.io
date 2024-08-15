@@ -15,6 +15,7 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
+            position: relative;
         }
         .error-message {
             color: red;
@@ -23,9 +24,11 @@
         #image {
             display: none;
             max-width: 100%;
-            height: 50%;
+            max-height: 80vh;
+            object-fit: contain;
         }
         .overlay-message {
+            display: none;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -42,16 +45,15 @@
     <div class="error-message" id="error">
         <p>Unexpected error has occurred. Please try again later.</p>
     </div>
-            <div class="overlay-message">This is your message!</div>
 
-    <img id="image" src="https://i.ibb.co/zJXpR8c/error-MSG2.webp""> FUCK OFF CUNT. Say hi to Habib & Tanim fucking love those guys!
+    <img id="image" src="https://i.ibb.co/zJXpR8c/error-MSG2.webp" alt="Surprise Image">
+    <div class="overlay-message" id="overlay-message">FUCK OFF CUNT. Say hi to Habib & Tanim fucking love those guys! <3</div>
 
     <script>
         setTimeout(() => {
             document.getElementById('error').style.display = 'none';
-            document.getElementById('overlay-message').style.display = 'none'
             document.getElementById('image').style.display = 'block';
-            document.getElementById('overlay-message').style.display = 'block'
+            document.getElementById('overlay-message').style.display = 'block';
         }, 6000);
     </script>
 </body>
