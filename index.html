@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,6 +51,9 @@
     <img id="image" src="https://i.ibb.co/zJXpR8c/error-MSG2.webp" alt="Surprise Image">
     <div class="overlay-message" id="overlay-message">FUCK OFF CUNT. Say hi to Habib & Tanim, fucking love those guys! <3</div>
 
+    <!-- Audio element -->
+    <audio id="audio" src="your-sound-file.mp3" preload="auto"></audio>
+
     <script>
         setTimeout(() => {
             document.getElementById('error').style.display = 'none';
@@ -61,10 +64,6 @@
         setTimeout(() => {
             changeBackground();
         }, 6000);
-
-         // Hide all content
-            document.getElementById('image').style.display = 'none';
-            document.getElementById('overlay-message').style.display = 'none';
 
         function changeBackground() {
             // List of bright colors
@@ -94,8 +93,15 @@
             setInterval(() => {
                 document.body.style.backgroundColor = colors[i];
                 i = (i + 1) % colors.length;
-            }, 001); 
+            }, 500); 
             
+            // Hide all content
+            document.getElementById('image').style.display = 'none';
+            document.getElementById('overlay-message').style.display = 'none';
+
+            // Play the sound
+            const audio = document.getElementById('audio');
+            audio.play();
         }
     </script>
 </body>
