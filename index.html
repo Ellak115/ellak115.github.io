@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Error Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .error-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: red;
+            font-size: 24px;
+        }
+        #image {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-message" id="error">
+        <p>Unexpected error has occurred. Please try again later.</p>
+    </div>
+    <img id="image" src="https://via.placeholder.com/400" alt="Surprise Image">
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('error').style.display = 'none';
+            document.getElementById('image').style.display = 'block';
+        }, 6000);
+    </script>
+</body>
+</html>
