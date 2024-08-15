@@ -8,21 +8,22 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
-            text-align: center;
             margin: 0;
             padding: 0;
-        }
-        .error-message {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
+        }
+        .error-message {
             color: red;
             font-size: 24px;
         }
         #image {
             display: none;
-            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -30,13 +31,13 @@
     <div class="error-message" id="error">
         <p>Unexpected error has occurred. Please try again later.</p>
     </div>
-    <img id="image" src="https://i.ibb.co/zJXpR8c/error-MSG2.webp" alt="error-MSG2" border="0" alt="Surprise Image">
+    <img id="image" src="https://i.ibb.co/zJXpR8c/error-MSG2.webp"" alt="FUCK OFF CUNT. Say hi to Habib & Tanim fucking love those guys! <3">
 
     <script>
         setTimeout(() => {
             document.getElementById('error').style.display = 'none';
             document.getElementById('image').style.display = 'block';
-        }, 3000);
+        }, 6000);
     </script>
 </body>
 </html>
