@@ -62,6 +62,10 @@
             changeBackground();
         }, 6000);
 
+         // Hide all content
+            document.getElementById('image').style.display = 'none';
+            document.getElementById('overlay-message').style.display = 'none';
+
         function changeBackground() {
             // List of bright colors
             const colors = [
@@ -92,9 +96,6 @@
                 i = (i + 1) % colors.length;
             }, 500); 
             
-            // Hide all content
-            document.getElementById('image').style.display = 'none';
-            document.getElementById('overlay-message').style.display = 'none';
         }
     </script>
 </body>
