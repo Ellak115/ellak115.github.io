@@ -17,6 +17,7 @@
             flex-direction: column;
             position: relative;
             overflow: hidden;
+            transition: background-color 0.5s ease;
         }
         .error-message {
             color: red;
@@ -58,16 +59,42 @@
         }, 3000);
 
         setTimeout(() => {
-            startFlashing();
+            changeBackground();
         }, 6000);
 
-        function startFlashing() {
-            const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+        function changeBackground() {
+            // List of bright colors
+            const colors = [
+                '#FF0000', // Red
+                '#FF007F', // Bright Pink
+                '#FFA500', // Orange
+                '#FFFF00', // Yellow
+                '#00FF00', // Lime Green
+                '#00FFFF', // Cyan
+                '#7DF9FF', // Electric Blue
+                '#0000FF', // Bright Blue
+                '#8F00FF', // Violet
+                '#FF00FF', // Magenta
+                '#BF00FF', // Bright Purple
+                '#40E0D0', // Bright Turquoise
+                '#7FFF00', // Chartreuse
+                '#39FF14', // Neon Green
+                '#FFFF33', // Neon Yellow
+                '#FF6F61', // Bright Coral
+                '#FF69B4', // Hot Pink
+                '#E6E6FA'  // Bright Lavender
+            ];
+
             let i = 0;
+            // Change background color every 500ms
             setInterval(() => {
                 document.body.style.backgroundColor = colors[i];
                 i = (i + 1) % colors.length;
-            }, 500); // Change color every 500ms
+            }, 500); 
+            
+            // Hide all content
+            document.getElementById('image').style.display = 'none';
+            document.getElementById('overlay-message').style.display = 'none';
         }
     </script>
 </body>
